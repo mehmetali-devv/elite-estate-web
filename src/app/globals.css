@@ -10,6 +10,11 @@
   --accent-foreground: #ffffff;
   --muted: #111111;
   --muted-foreground: #888888;
+
+  /* Elite Estate Colors */
+  --elite-black: #050505;
+  --elite-anthracite: #121212;
+  --elite-gold: #B8860B;
 }
 
 @theme inline {
@@ -24,6 +29,11 @@
   --color-muted-foreground: var(--muted-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Elite Estate Theme */
+  --color-elite-black: var(--elite-black);
+  --color-elite-anthracite: var(--elite-anthracite);
+  --color-elite-gold: var(--elite-gold);
 }
 
 body {
