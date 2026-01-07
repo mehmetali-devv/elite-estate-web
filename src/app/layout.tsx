@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Playfair_Display, Inter } from "next/font/google"; // Correct way to import from next/font/google
-import "../globals.css";
+import "./globals.css";
 
 const playfair = Playfair_Display({
     subsets: ["latin"],
