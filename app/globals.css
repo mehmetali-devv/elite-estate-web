@@ -1,67 +1,22 @@
 @import "tailwindcss";
 
-:root {
-  --background: #000000;
-  --foreground: #ffffff;
-  --card: #0a0a0a;
-  --card-foreground: #ffffff;
-  --border: #222222;
-  --accent: #333333;
-  --accent-foreground: #ffffff;
-  --muted: #111111;
-  --muted-foreground: #888888;
-
-  /* Elite Estate Colors */
-  --elite-black: #050505;
-  --elite-anthracite: #121212;
-  --elite-gold: #B8860B;
+@theme {
+  --font-h: var(--font-playfair);
+  --font-b: var(--font-lato);
+  
+  --color-elite-black: #0a0a0a;
+  --color-elite-dark-grey: #1a1a1a;
+  --color-elite-gold: #d4af37;
+  --color-elite-gold-dim: #aa8c2c;
+  --color-elite-gold-light: #f3e5ab;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-border: var(--border);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
-  /* Elite Estate Theme */
-  --color-elite-black: var(--elite-black);
-  --color-elite-anthracite: var(--elite-anthracite);
-  --color-elite-gold: var(--elite-gold);
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Scrollbar styling for elite feel */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--background);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
+/* Custom Base Styles */
+@layer base {
+  body {
+    @apply bg-elite-black text-white font-b;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-h text-elite-gold;
+  }
 }
